@@ -4,6 +4,10 @@ set -e
 
 echo "install"
 
+sudo aptitude install lftp
+
+echo "romain"
+
 sudo apt-get install -y lftp
 
 echo "install done"
