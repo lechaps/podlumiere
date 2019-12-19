@@ -5,7 +5,7 @@
 	/* 		  MEDIA PLAYER	     */
 	/* ========================= */
 	
-		$('video, audio').mediaelementplayer({
+		$('audio').mediaelementplayer({
 			audioWidth: '100%'
 		});
 	
