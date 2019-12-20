@@ -1,7 +1,7 @@
 # .travis.yml
-os: linux
 dist: trusty
-language: shell
+sudo: required
+language: minimal
 
 branches:
   only:
