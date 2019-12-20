@@ -1,6 +1,7 @@
 # .travis.yml
 dist: trusty
 sudo: required
+language: minimal
 
 branches:
   only:
