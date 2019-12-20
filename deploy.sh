@@ -1,5 +1,6 @@
 #!/bin/sh
 # deploy.sh
-set -e
 
-wput --basename=/public -u /public/*.* ftp://$FTP_USER:$FTP_PASS@$FTP_HOST
+tar -cvf "FTPWebsite.tar" public/
+
+curl -T "FTPWebsite.tar" -u $FTP_USER:$FTP_PASS $FTP_HOST
