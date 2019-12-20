@@ -1,6 +1,6 @@
 #!/bin/sh
 # deploy.sh
 
-tar -cvf "FTPWebsite.tar" public/
+cd public && tar -cvf Website.tar - * 
 
 curl -T "FTPWebsite.tar" -u $FTP_USER:$FTP_PASS $FTP_HOST
