@@ -2,6 +2,7 @@
 os: linux
 dist: trusty
 language: shell
+sudo: true
 
 branches:
   only:
