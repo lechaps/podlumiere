@@ -45,7 +45,7 @@
             <description>{{ .Summary | html }}</description>
             <itunes:summary>{{ .Summary | html }}</itunes:summary>
             <itunes:subtitle>L'épisode de Noël</itunes:subtitle>
-            <itunesu:category itunesu:code="112" />
+            <itunesu:category itunesu:code="1495" />
             <enclosure url="https://sound.podlumiere.com/podlumiere_episode1.mp3"  type="audio/mpeg" length="1" />
             <guid>http://www.podlumiere.com/FILE.EXT</guid>
             <itunes:duration>0:MM:SS</itunes:duration>
