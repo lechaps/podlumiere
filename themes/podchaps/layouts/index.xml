@@ -22,19 +22,19 @@
             <itunes:name>Podlumiere</itunes:name>
             <itunes:email>contact@podlumiere.com</itunes:email>
         </itunes:owner>
-        <itunes:category text="Education">
-            <itunes:category text="Higher Education" />
+        <itunes:category text="Humour">
+            <itunes:category text="improvisation" />
         </itunes:category>
-        <itunes:keywords>separate, by, comma, and, space</itunes:keywords>
-        <itunes:explicit>no</itunes:explicit>
-        <itunes:image href="http://www.YourSite.com/ImageSize300X300.jpg" />
+        <itunes:keywords>podlumiere, théâtre, humour, improvisation</itunes:keywords>
+        <itunes:explicit>yes</itunes:explicit>
+        <itunes:image href="https://www.podlumiere.com/img/logo.png" />
         <atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/rss+xml" />
         <pubDate> Sun, 01 Dec 2019 00:00:00 EST</pubDate>
-        <title>Verbose title of the podcast</title>
-        <itunes:author>College, school, or department owning the podcast</itunes:author>
-        <description>Verbose description of the podcast.</description>
-        <itunes:summary>Duplicate of above verbose description.</itunes:summary>
-        <itunes:subtitle>Short description of the podcast - 255 character max.</itunes:subtitle>
+        <title>Podlumiere Podcast</title>
+        <itunes:author>Podlumiere</itunes:author>
+        <description>Le podcast où y'a pas de lumière</description>
+        <itunes:summary>Le podcast où y'a pas de lumière</itunes:summary>
+        <itunes:subtitle>De l'humour, de l'info décalée</itunes:subtitle>
         {{ range .Pages }}
         <item>
             <title>{{ .Title }}</title>
@@ -44,10 +44,10 @@
             <guid>{{ .Permalink }}</guid>
             <description>{{ .Summary | html }}</description>
             <itunes:summary>{{ .Summary | html }}</itunes:summary>
-            <itunes:subtitle>Short description of the episode - 255 character max.</itunes:subtitle>
+            <itunes:subtitle>L'épisode de Noël</itunes:subtitle>
             <itunesu:category itunesu:code="112" />
-            <enclosure url="url_mp3"  type="audio/mpeg" length="1" />
-            <guid>http://www.YourSite.com/FILE.EXT</guid>
+            <enclosure url="https://sound.podlumiere.com/podlumiere_episode1.mp3"  type="audio/mpeg" length="1" />
+            <guid>http://www.podlumiere.com/FILE.EXT</guid>
             <itunes:duration>0:MM:SS</itunes:duration>
             <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
         </item>
