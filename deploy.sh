@@ -1,9 +1,0 @@
-#!/bin/sh
-# deploy.sh
-
-
-cd public
-
-echo "copying files..."
-
-lftp ftp://$FTP_USER:$FTP_PASS@$FTP_HOST -e "set ssl:verify-certificate no;mirror -e -R -v"
