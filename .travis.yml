@@ -22,6 +22,5 @@ script:
 deploy:
   - provider: script
     script: ./deploy.sh
-    cleanup: true
     on:
       branch: master
