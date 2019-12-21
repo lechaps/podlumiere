@@ -22,8 +22,8 @@
             <itunes:name>Podlumiere</itunes:name>
             <itunes:email>contact@podlumiere.com</itunes:email>
         </itunes:owner>
-        <itunes:category text="Humour">
-            <itunes:category text="improvisation" />
+        <itunes:category text="Comedy">
+            <itunes:category text="Improv" />
         </itunes:category>
         <itunes:keywords>podlumiere, théâtre, humour, improvisation</itunes:keywords>
         <itunes:explicit>yes</itunes:explicit>
