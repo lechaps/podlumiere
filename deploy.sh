@@ -1,7 +1,7 @@
 #!/bin/sh
 # deploy.sh
 
-ls
+hugo
 
 cd public
 
