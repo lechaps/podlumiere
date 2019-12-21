@@ -1,11 +1,11 @@
-version: 2.0
+version: 1.0
 jobs:
   build:
     machine:
       image: circleci/classic:latest
     branches:
-          only:
-            - master
+      only:
+        - master
     steps:
       - run:
           name: Install LFTP
@@ -20,5 +20,5 @@ jobs:
             sudo dpkg -i /tmp/hugo.deb
             hugo
       - run:
-          name: Send Via SFTP
-          command: lftp sftp://${FTP_USER}:${FTP_PASS}@${FTP_HOST} -e "set ssl:verify-certificate no;mirror -e -R -v public /; quit"
+          name: Send Via FTP
+          command: lftp ftp://${FTP_USER}:${FTP_PASS}@${FTP_HOST} -e "set ssl:verify-certificate no;mirror -e -R -v public /; quit"
