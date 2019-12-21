@@ -21,4 +21,4 @@ jobs:
             hugo
       - run:
           name: Send Via SFTP
-          command: lftp sftp://${username}:${password}@${hostname} -e "set ssl:verify-certificate no;mirror -e -R -v public /; quit"
+          command: lftp sftp://${FTP_USER}:${FTP_PASS}@${FTP_HOST} -e "set ssl:verify-certificate no;mirror -e -R -v public /; quit"
