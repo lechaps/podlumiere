@@ -2,6 +2,11 @@
 os: linux
 dist: trusty
 language: shell
+sudo: false
+addons:
+  apt:
+    packages:
+    - lftp
 
 branches:
   only:
