@@ -1,5 +1,6 @@
 # .travis.yml
-os: osx
+os: linux
+dist: trusty
 language: shell
 addons:
   apt:
