@@ -1,8 +1,6 @@
 # .travis.yml
-os: linux
-dist: trusty
+os: osx
 language: shell
-sudo: true
 addons:
   apt:
     packages:
