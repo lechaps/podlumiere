@@ -1,0 +1,109 @@
+{{ define "main" }}
+    <!-- ===== PAGE HEADER ===== -->
+    <header class="page-header-podcast" style="background-image: url({{ .Site.BaseURL }}{{ .Params.image }})">
+        <div class="page-header-inner">
+            <div class="container">
+
+                <!-- ===== PAGE HEADER CONTENT ===== -->
+                <div class="page-header-content text-center">
+                    <h2>{{ .Title }}</h2>
+                    <p>{{ .Content }}</p>
+                </div>
+                <!-- ===== PODCAST PLAYER ===== -->
+                <div class="podcast-hero-player-content">
+                    <div class="container">
+                        <!-- ===== CUSTOM PLAYER ===== -->
+                        <audio src="{{ .Params.mp3 }}"></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ===== PODCAST META ===== -->
+    <div class="podcast-meta-element">
+        <span class="podcast-meta-item"><i class="fa fa-calendar"></i>&nbsp;{{ .Params.subtitle }}</span>
+        <span class="podcast-meta-item"><i class="fa fa-clock-o"></i>&nbsp;{{ .Params.duration }}</span>
+        <a class="podcast-meta-item" href="#"><i class="fa fa-download"></i>&nbsp;Télécharger</a>
+    </div>
+    
+    <!-- ===== PODCAST PLAYER ===== -->
+    {{ if .Params.soundcloudtrack }}
+        <div class="podcast-player">
+            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ .Params.soundcloudtrack}}&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=false&show_reposts=false&show_teaser=true"></iframe>
+        </div>
+    {{ end }}
+    <!-- ===== PODCAST LINKS ===== -->
+    <div class="podcast-links">
+        <div class="container">
+            <ul class="podcast-links-list">
+                {{ range .Params.instant }}
+                    <li><a href="#" class="btn btn-success btn-sm">{{ .time }}</a> <a href="#" class="podcast-link-cite">{{ .title }}</a></li>
+                {{ end }}
+             </ul>
+        </div>
+    </div>
+    
+    <!-- ===== SINGLE PAGE CONTENT ===== -->
+    <div class="section-negative">
+        <div class="container">
+            
+            <div class="row mt-70 mb-50">
+                
+                <!-- ===== PODCAST TEXT CONTENT ===== -->
+                <div class="col-md-8 mb-50">
+                    
+                    <!-- ===== PAGE MAIN CONTENT ===== -->
+                    <div class="page-content">
+                        {{ .Content}}
+                    </div>
+                    
+                    <!-- ===== HR ===== -->
+                    <hr />
+                    
+                    <!-- ===== PREV AND NEXT ===== -->
+                    <div class="page-pagination">
+                        <!-- ===== PREV ===== -->
+                        {{ with .PrevInSection }}
+                            <a href="{{ .Permalink }}" class="page-pagination-prev">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>{{ .Params.subtitle }}</span>
+                                <p>{{ .Title }}</p>
+                            </a>
+                        {{ end }}
+                        <!-- ===== NEXT ===== -->
+                        {{ with .NextInSection }}
+                            <a href="{{ .Permalink }}" class="page-pagination-prev">
+                                <i class="fa fa-long-arrow-left"></i>
+                                <span>{{ .Params.subtitle }}</span>
+                                <p>{{ .Title }}</p>
+                            </a>
+                        {{ end }}
+                    </div>
+                    
+                    <!-- ===== HR ===== -->
+                    <hr />
+                
+                <!-- ===== SIDEBAR ===== -->
+                <div class="col-md-4">
+                    <!-- ===== PODCAST SIDEBAR ===== -->
+                    <div class="page-sidebar">
+                        <!-- ===== SIDEBAR WIDGET ===== -->
+                        <div class="sidebar-widget">
+                            <h2 class="title-separator">Social</h2>
+                            <ul class="social-list colored">
+                                <li class="social-item facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li class="social-item twitter"><a href="https://twitter.com/home?status={{ .Permalink }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li class="social-item email"><a href="mailto:?&subject={{ .Title }}" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+{{ end}}

@@ -1,11 +1,24 @@
 baseURL = "https://www.podlumiere.com/"
-title = "Pod'lumière"
-languageCode = "fr-FR"
+title = "Podlumiere"
 theme = "podchaps"
+languageCode = "fr-FR"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+  
 [outputs]
   home = ["html", "rss"]
   page = ["html"]
+
 [author]
   name = "Podlumiere"
   email = "contact@podlumiere.com"
+
+[params]
+  description = "Pod'lumière, le podcast ou y'a pas d'lumière" 
+  subtitle = "De l'humour, de l'impro, mais pas d'lumière" 
+  logo = "http://www.podlumiere.com/img/logo.png"
+  keywords = "podlumiere, podcast, théâtre, humour, improvisation"
+  footer = "Pod'lumière - 2019"
+  facebook = "https://www.facebook.com/podlumiere/"
+  soundcloud = "https://soundcloud.com/podlumiere/"
+  spotify = ""
+  apple = ""

@@ -5,12 +5,12 @@
         <link>{{ .Permalink }}</link>
         <description>Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>{{ with .Site.LanguageCode }} {{.}} {{end}}</language>
-        <managingEditor>{{ with .Site.Author.email }} {{.}} {{end}}</managingEditor>
-        <webMaster>{{ with .Site.Author.email }} {{.}} {{end}} {{ with $.Site.Author.name }} ({{.}}) {{end}}</webMaster>
-        <copyright>{{ with .Site.Copyright }} {{.}} {{end}}</copyright>
+        <language>{{ .Site.LanguageCode }}</language>
+        <managingEditor>{{ .Site.Author.email }}</managingEditor>
+        <webMaster>{{ $.Site.Author.name }} / {{ .Site.Author.email }}</webMaster>
+        <copyright>{{ .Site.Copyright }}</copyright>
         <image>
-            <url>https://www.podlumiere.com/img/logo.png</url>
+            <url>{{ .Site.Params.Logo }}</url>
             <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
             <link>{{ .Permalink }}</link>
         </image>
@@ -19,38 +19,36 @@
             {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
         {{ end }}
         <itunes:owner>
-            <itunes:name>Podlumiere</itunes:name>
-            <itunes:email>contact@podlumiere.com</itunes:email>
+            <itunes:name>{{ .Site.Title }}</itunes:name>
+            <itunes:email>{{ .Site.Author.email }}</itunes:email>
         </itunes:owner>
         <itunes:category text="Comedy">
             <itunes:category text="Improv" />
         </itunes:category>
-        <itunes:keywords>podlumiere, théâtre, humour, improvisation</itunes:keywords>
+        <itunes:keywords>{{ .Site.Params.keywords }}</itunes:keywords>
         <itunes:explicit>yes</itunes:explicit>
-        <itunes:image href="https://www.podlumiere.com/img/logo.png" />
+        <itunes:image href="{{ .Site.Params.Logo }}" />
         <atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/rss+xml" />
         <pubDate> Sun, 01 Dec 2019 00:00:00 EST</pubDate>
-        <title>Podlumiere Podcast</title>
-        <itunes:author>Podlumiere</itunes:author>
-        <description>Le podcast où y'a pas de lumière</description>
-        <itunes:summary>Le podcast où y'a pas de lumière</itunes:summary>
-        <itunes:subtitle>De l'humour, de l'info décalée</itunes:subtitle>
-        {{ range .Pages }}
-        <item>
-            <title>{{ .Title }}</title>
-            <link>{{ .Permalink }}</link>
-            <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-            <author>{{ with .Site.Author.email }} {{.}} {{end}} {{ with $.Site.Author.name }} ({{.}}){{end}}</author>
-            <guid>{{ .Permalink }}</guid>
-            <description>{{ .Summary | html }}</description>
-            <itunes:summary>{{ .Summary | html }}</itunes:summary>
-            <itunes:subtitle>L'épisode de Noël</itunes:subtitle>
-            <itunesu:category itunesu:code="1495" />
-            <enclosure url="https://sound.podlumiere.com/podlumiere_episode1.mp3"  type="audio/mpeg" length="1" />
-            <guid>http://www.podlumiere.com/FILE.EXT</guid>
-            <itunes:duration>0:MM:SS</itunes:duration>
-            <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-        </item>
+        <title>{{ .Site.Title}} Podcast</title>
+        <itunes:author>{{ .Site.Author.name}}</itunes:author>
+        <description>{{ .Site.Params.description }}</description>
+        <itunes:summary>{{ .Site.Params.description }}</itunes:summary>
+        <itunes:subtitle>{{ .Site.Params.subtitle }}</itunes:subtitle>
+        {{ range where .Site.RegularPages "Section" "episode" }}
+            <item>
+                <title>{{ .Title }}</title>
+                <link>{{ .Permalink }}</link>
+                <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+                <author>{{ $.Site.Author.name }} / {{ .Site.Author.email }}</author>
+                <guid>{{ .Permalink }}</guid>
+                <description>{{ .Summary }}</description>
+                <enclosure url="{{ .Params.mp3 }}"  type="audio/mpeg" length="1" />
+                <itunes:summary>{{ .Summary }}</itunes:summary>
+                <itunes:subtitle>{{ .Params.subtitle }}</itunes:subtitle>
+                <itunesu:category itunesu:code="1495" />
+                <itunes:duration>{{ .Params.duration}}</itunes:duration>
+            </item>
         {{ end }}
     </channel>
 </rss>
