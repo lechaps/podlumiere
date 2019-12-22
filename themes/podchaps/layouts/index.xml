@@ -1,13 +1,13 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:itunesu="http://www.itunesu.com/feed" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
+        <title>{{ .Site.Title | safeHTML }}</title>
         <link>{{ .Permalink }}</link>
-        <description>Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}</description>
+        <description>{{ .Site.Params.description | safeHTML }}</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>{{ .Site.LanguageCode }}</language>
         <managingEditor>{{ .Site.Author.email }}</managingEditor>
-        <webMaster>{{ $.Site.Author.name }} / {{ .Site.Author.email }}</webMaster>
+        <webMaster>{{ .Site.Author.email }}</webMaster>
         <copyright>{{ .Site.Copyright }}</copyright>
         <image>
             <url>{{ .Site.Params.Logo }}</url>
@@ -22,17 +22,14 @@
             <itunes:name>{{ .Site.Title }}</itunes:name>
             <itunes:email>{{ .Site.Author.email }}</itunes:email>
         </itunes:owner>
-        <itunes:category text="Comedy">
-            <itunes:category text="Improv" />
-        </itunes:category>
+        <itunes:category text="Comedy"></itunes:category>
         <itunes:keywords>{{ .Site.Params.keywords }}</itunes:keywords>
         <itunes:explicit>yes</itunes:explicit>
         <itunes:image href="{{ .Site.Params.Logo }}" />
         <atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/rss+xml" />
         <pubDate> Sun, 01 Dec 2019 00:00:00 EST</pubDate>
-        <title>{{ .Site.Title}} Podcast</title>
+
         <itunes:author>{{ .Site.Author.name}}</itunes:author>
-        <description>{{ .Site.Params.description }}</description>
         <itunes:summary>{{ .Site.Params.description }}</itunes:summary>
         <itunes:subtitle>{{ .Site.Params.subtitle }}</itunes:subtitle>
         {{ range where .Site.RegularPages "Section" "episode" }}
@@ -40,7 +37,7 @@
                 <title>{{ .Title }}</title>
                 <link>{{ .Permalink }}</link>
                 <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
-                <author>{{ $.Site.Author.name }} / {{ .Site.Author.email }}</author>
+                <author>{{ .Site.Author.email }}</author>
                 <guid>{{ .Permalink }}</guid>
                 <description>{{ .Summary }}</description>
                 <enclosure url="{{ .Params.mp3 }}"  type="audio/mpeg" length="1" />
