@@ -13,12 +13,13 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
   email = "contact@podlumiere.com"
 
 [params]
-  description = "Pod'lumière, le podcast ou y'a pas d'lumière" 
+  description = "Podlumière, le podcast ou y'a pas d'lumière" 
   subtitle = "De l'humour, de l'impro, mais pas d'lumière" 
   logo = "http://www.podlumiere.com/img/logo.png"
-  keywords = "podlumiere, podcast, théâtre, humour, improvisation"
-  footer = "Pod'lumière - 2019"
+  keywords = "podlumiere, pod'lumiere, podlumière, pod'lumière, podcast, théâtre, humour, improvisation"
+  footer = "Podlumiere - 2019"
   facebook = "https://www.facebook.com/podlumiere/"
   soundcloud = "https://soundcloud.com/podlumiere/"
-  spotify = ""
+  spotify = "https://open.spotify.com/show/7cj7Z21EH5XR10ODePtkFE"
+  deezer = "https://www.deezer.com/fr/show/749702"
   apple = ""
