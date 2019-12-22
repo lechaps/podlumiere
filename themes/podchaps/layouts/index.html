@@ -42,8 +42,8 @@
 						<figure class="podcast-image"><a href="{{ .Permalink }}"><img src="{{ .Params.image }}" alt="{{ .Title }}" title="Épisode #0" /></a></figure>
 						<div class="podcast-content">
 							<span class="podcast-date">{{ .Params.subtitle }}</span>
-							<h2 class="podcast-title"><a href="#">{{ .Title }}</a></h2>
-							<p class="podcast-excerpt"><a href="#">{{ .Summary | safeHTML }}</a></p>
+							<h2 class="podcast-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+							<p class="podcast-excerpt"><a href="{{ .Permalink }}">{{ .Summary | safeHTML }}</a></p>
 							<ul class="podcast-meta">
 								<li class="item"><i class="fa fa-clock-o"></i>&nbsp;{{ .Params.duration }}</li>
 								<li class="item"><a href="{{ .Permalink }}" class="podcast-play"><i class="fa fa-play"></i>&nbsp;Écouter l'épisode</a></li>

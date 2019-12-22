@@ -4,8 +4,15 @@ image = "img/episodes/episode_000.jpg"
 title = "Episode #0 - Les premières fois"
 subtitle = "Novembre 2019"
 mp3 = "https://sound.podlumiere.com/podlumiere_episode0.mp3"
-soundcloud  = ""
+soundcloudtrack = "732262678"
 duration = "34:56"
+
+[[instant]]
+    time = "00:41"
+    title = "Saut du générique"
+[[instant]]
+    time = "00:41"
+    title = "Emission surprise !"
 +++
 
 Le pilote de l'émission. Enregistrement à l'arrache garantie !
