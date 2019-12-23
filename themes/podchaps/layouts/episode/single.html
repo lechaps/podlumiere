@@ -9,17 +9,19 @@
                     <h2>{{ .Title }}</h2>
                     <p>{{ .Summary }}</p>
                 </div>
-                <!-- ===== PODCAST PLAYER ===== -->
-                <div class="podcast-hero-player-content">
-                    <div class="container">
-                        <!-- ===== CUSTOM PLAYER ===== -->
-                        <audio src="{{ .Params.mp3 }}"></audio>
-                    </div>
-                </div>
             </div>
         </div>
     </header>
     
+    <!-- ===== PODCAST PLAYER ===== -->
+    <div class="podcast-player">
+        <div class="podcast-player-inner">
+            <div class="container">
+                <audio src="{{ .Params.mp3 }}"></audio>
+            </div>
+        </div>
+    </div>
+
     <!-- ===== PODCAST META ===== -->
     <div class="podcast-meta-element">
         <span class="podcast-meta-item"><i class="fa fa-calendar"></i>&nbsp;{{ .Params.subtitle }}</span>
@@ -43,16 +45,12 @@
              </ul>
         </div>
     </div>
-    
     <!-- ===== SINGLE PAGE CONTENT ===== -->
     <div class="section-negative">
         <div class="container">
-            
             <div class="row mt-70 mb-50">
-                
                 <!-- ===== PODCAST TEXT CONTENT ===== -->
                 <div class="col-md-8 mb-50">
-                    
                     <!-- ===== PAGE MAIN CONTENT ===== -->
                     <div class="page-content">
                         {{ .Content}}
@@ -83,6 +81,14 @@
                     
                     <!-- ===== HR ===== -->
                     <hr />
+                    
+                    <!-- ===== COMMENTS ===== -->
+                    <div class="page-comments">
+                        {{ template "_internal/disqus.html" . }}
+                    </div>
+                    <!-- ===== HR ===== -->
+                    <hr />
+                </div>
                 
                 <!-- ===== SIDEBAR ===== -->
                 <div class="col-md-4">
@@ -97,13 +103,9 @@
                                 <li class="social-item email"><a href="mailto:?&subject={{ .Title }}" target="_blank"><i class="fa fa-envelope"></i></a></li>
                             </ul>
                         </div>
-                        
                     </div>
-                    
                 </div>
-                
             </div>
-            
         </div>
     </div>
 {{ end}}

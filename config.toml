@@ -3,6 +3,8 @@ title = "Podlumiere"
 theme = "podchaps"
 languageCode = "fr-FR"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+googleAnalytics = "UA-154973610-1"
+disqusShortname = "podlumiere"
   
 [outputs]
   home = ["html", "rss"]
