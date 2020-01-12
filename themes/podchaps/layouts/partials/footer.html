@@ -20,9 +20,9 @@
                 <div class="col-sm-3 mb-40">
                     <h2 class="title-separator white">Derniers épisodes</h2>
                     <ul class="footer-complement">
-                        {{ range first 10 (where .Site.RegularPages.ByPublishDate.Reverse "Section" "episode")}}	
+                        {{ range first 3 (where .Site.RegularPages.ByPublishDate.Reverse "Section" "episode")}}	
                             <li>
-                                <a href="#">{{ .Title }}</a>
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
                                 <span>{{ .Params.subtitle }}</span>
                             </li>
                         {{ end }}	
