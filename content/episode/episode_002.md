@@ -1,5 +1,5 @@
 +++
-date = "2019-12-17T21:40:01+01:00"
+date = "2020-01-01T21:40:01+01:00"
 image = "img/episodes/episode_002.jpg"
 title = "Episode #2 - Nouvel an"
 subtitle = "Janvier 2020"
