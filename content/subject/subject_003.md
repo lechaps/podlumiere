@@ -1,6 +1,6 @@
 +++
 weight = 3
-title = "La reproduction des batraciens en période hivernale"
+title = "La reconnaissance coloniale du couvain et du champignon chez la fourmi champignonniste"
 +++
 
 Un vrai sujet...mais on hésite encore.
