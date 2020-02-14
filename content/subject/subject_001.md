@@ -1,6 +1,5 @@
 +++
 weight = 1
-title = "Les superstitions et les tocs"
+title = "Les séries"
 +++
-
-T'y crois pas ?! Sérieux, dis moi que t'y crois pas !
+Critique et étude des dernières séries diffusées (promis on essaiera de parler du Château des Oliviers)
