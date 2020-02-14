@@ -4,7 +4,6 @@ image = "img/episodes/episode_000.jpg"
 title = "Episode #0 - Les premières fois"
 subtitle = "Novembre 2019"
 mp3 = "https://sound.podlumiere.com/podlumiere_episode0.mp3"
-soundcloudtrack = "732262678"
 duration = "34:56"
 
 [[instant]]

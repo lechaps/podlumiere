@@ -4,7 +4,6 @@ image = "img/episodes/episode_002.jpg"
 title = "Episode #2 - Nouvel an"
 subtitle = "Janvier 2020"
 mp3 = "https://sound.podlumiere.com/podlumiere_episode2.mp3"
-soundcloudtrack = "742174117"
 duration = "50:14"
 
 [[instant]]
@@ -43,4 +42,5 @@ duration = "50:14"
 
 +++
 
-Episode n°2 consacré au réveillon du nouvel an et aux voeux de l'année 2020.
+Comment se sont passés les réveillons de fin d'année ? Loïc a-t-il vaincu sont addiction à la boite à jingle ? Comment va le chat de Marine ? Bonne ou mauvaise résolution ? Pourquoi David aime tant le pain surprise ? Candice, ça fait pas un peu ... ?  
+Autant de questions qui trouvent un semblant de réponse dans le nouvel épisode de podlumière.
