@@ -39,9 +39,9 @@
                 <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
                 <author>{{ .Site.Author.email }}</author>
                 <guid>{{ .Permalink }}</guid>
-                <description>{{ .Summary }}</description>
+                <description>{{ .Summary | htmlUnescape }}</description>
                 <enclosure url="{{ .Params.mp3 }}"  type="audio/mpeg" length="1" />
-                <itunes:summary>{{ .Summary }}</itunes:summary>
+                <itunes:summary>{{ .Summary | htmlUnescape }}</itunes:summary>
                 <itunes:subtitle>{{ .Params.subtitle }}</itunes:subtitle>
                 <itunesu:category itunesu:code="1495" />
                 <itunes:duration>{{ .Params.duration}}</itunes:duration>
