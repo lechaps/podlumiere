@@ -8,5 +8,5 @@ duration = "51:27"
 
 +++
 
-Comment va le caleçon de Dom ? David a-t-il deux maitresses ? C'est quand même une belle expérience les chiottes à la turc ! La solitude, au toilette, c'est histoire d'une vie ? On se fait un mito/pas mito ?
+Comment va le caleçon de Dom ? David a-t-il deux maitresses ? C'est quand même une belle expérience les chiottes à la turc !? La solitude, au toilette, c'est histoire d'une vie ? T'as du papier ? On se fait un mito/pas mito ?
 (Enregistré réalisé avant les mesures de confinement du gouvernement)
