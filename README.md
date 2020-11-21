@@ -1,6 +1,6 @@
 # podlumiere
 
-website source of www.podlumiere.com, a very nice podcast !
+source of the old website www.podlumiere.com, that was a very nice podcast project !
 
 ## Installation
 
